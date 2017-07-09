@@ -6,17 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="localhost:4000">
-  <title>Tag: iOS开发 | JackPanda&#39;s Blog</title>
+  <title>LeetCode-006-ZigZagConversion | JackPanda&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="May you find your inner piece.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="JackPanda&#39;s Blog">
-<meta property="og:url" content="localhost:4000/tags/iOS开发/index.html">
+  <meta name="description" content="leetCode-006-ZigZagConversion 题目描述 将给定的字符串以“之”字的形状排列，然后一行一行地读取得到新的字符串输出。例如”PAYPALISHIRING”的之字形排列如下：">
+<meta name="keywords" content="LeetCode">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LeetCode-006-ZigZagConversion">
+<meta property="og:url" content="localhost:4000/2017/01/13/LeetCode-006-ZigZagConversion/index.html">
 <meta property="og:site_name" content="JackPanda&#39;s Blog">
-<meta property="og:description" content="May you find your inner piece.">
+<meta property="og:description" content="leetCode-006-ZigZagConversion 题目描述 将给定的字符串以“之”字的形状排列，然后一行一行地读取得到新的字符串输出。例如”PAYPALISHIRING”的之字形排列如下：">
+<meta property="og:image" content="https://github.com/JackPanda8/ImageHosting/blob/master/LC006-ZigZagConversion.png?raw=true">
+<meta property="og:updated_time" content="2017-01-13T12:41:58.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JackPanda&#39;s Blog">
-<meta name="twitter:description" content="May you find your inner piece.">
+<meta name="twitter:title" content="LeetCode-006-ZigZagConversion">
+<meta name="twitter:description" content="leetCode-006-ZigZagConversion 题目描述 将给定的字符串以“之”字的形状排列，然后一行一行地读取得到新的字符串输出。例如”PAYPALISHIRING”的之字形排列如下：">
+<meta name="twitter:image" content="https://github.com/JackPanda8/ImageHosting/blob/master/LC006-ZigZagConversion.png?raw=true">
   
     <link rel="alternative" href="/atom.xml" title="JackPanda&#39;s Blog" type="application/atom+xml">
   
@@ -152,326 +156,196 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-LeetCode-006-ZigZagConversion" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      LeetCode-006-ZigZagConversion
+    </h1>
+  
+
+        
+        <a href="/2017/01/13/LeetCode-006-ZigZagConversion/" class="archive-article-date">
+  	<time datetime="2017-01-13T01:58:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-13</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="leetCode-006-ZigZagConversion"><a href="#leetCode-006-ZigZagConversion" class="headerlink" title="leetCode-006-ZigZagConversion"></a>leetCode-006-ZigZagConversion</h3><ol>
+<li><p>题目描述</p>
+<p>将给定的字符串以“之”字的形状排列，然后一行一行地读取得到新的字符串输出。例如”PAYPALISHIRING”的之字形排列如下：</p>
+<a id="more"></a>
+<p>|   P   |       |   A   |       |   H   |       |   N   |<br>| :—: | :—: | :—: | :—: | :—: | :—: | :—: |<br>| <strong>A</strong> | <strong>P</strong> | <strong>L</strong> | <strong>S</strong> | <strong>I</strong> | <strong>I</strong> | <strong>G</strong> |<br>| <strong>Y</strong> |       | <strong>I</strong> |       | <strong>R</strong> |       |       |<br>输出为”PAHNAPLSIIGYIR” 。现要求给出nRows，表示之字形排列时的行数（上面的nRows=3），输出转换后的字符串。</p>
+<blockquote>
+<p><img src="https://github.com/JackPanda8/ImageHosting/blob/master/LC006-ZigZagConversion.png?raw=true" alt="LC-006"><br> <a href="https://leetcode.com/problems/zigzag-conversion/" target="_blank" rel="external">LC-006</a></p>
+</blockquote>
+<p>​</p>
+</li>
+<li><p>题目分析</p>
+<ul>
+<li>之字形排列过程是由许多的下降（第一列PAY）、斜上升（YPA）组成的，建立一个有nRows个元素的StringBuilder，在循环遍历的过程中不断地在相应位置进行字符串拼接。</li>
+</ul>
+</li>
+<li><p>Java源码</p>
+</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span>  <span class="keyword">static</span> String <span class="title">convert</span><span class="params">(String s, <span class="keyword">int</span> nRows)</span> </span>&#123;</div><div class="line">        <span class="keyword">char</span>[] c = s.toCharArray();</div><div class="line">        <span class="keyword">int</span> len = c.length;</div><div class="line">        StringBuilder[] sb = <span class="keyword">new</span> StringBuilder[nRows];</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; sb.length; i++) sb[i] = <span class="keyword">new</span> StringBuilder();</div><div class="line"></div><div class="line">        <span class="keyword">int</span> i = <span class="number">0</span>;</div><div class="line">        <span class="keyword">while</span> (i &lt; len) &#123;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j  &lt; nRows &amp;&amp; i &lt; len; j++) &#123;</div><div class="line">                sb[j].append(c[i]);</div><div class="line">                i++;</div><div class="line">            &#125;</div><div class="line"></div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = nRows - <span class="number">2</span>; j &gt;= <span class="number">1</span> &amp;&amp; i &lt; len</div><div class="line">                    ; j --) &#123;</div><div class="line">                sb[j].append(c[i]);</div><div class="line">                i++;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> idx = <span class="number">1</span>; idx &lt; sb.length; idx++)</div><div class="line">            sb[<span class="number">0</span>].append(sb[idx]);</div><div class="line">        <span class="keyword">return</span> sb[<span class="number">0</span>].toString();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        System.out.println(Main.convert(<span class="string">"PAYPALISHIRING"</span>, <span class="number">4</span>));</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>stay hungry, stay foolish. –steve jobs.</p>
+</blockquote>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>欢迎投食🍌🍌🍌<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://raw.githubusercontent.com/JackPanda8/Mess/master/alipayQRCode.jpeg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://raw.githubusercontent.com/JackPanda8/Mess/master/wechatQRCode.JPG">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/23/记一次XCode项目工程文件冲突/" class="archive-article-date">
-  	<time datetime="2017-05-23T02:31:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/23/记一次XCode项目工程文件冲突/">记一次XCode项目工程文件冲突</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">iOS开发</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">LeetCode</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http:localhost:4000/2017/01/13/LeetCode-006-ZigZagConversion/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/22/ios中UIPickerView和UITableView的联动/" class="archive-article-date">
-  	<time datetime="2017-05-22T08:03:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-22</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/22/ios中UIPickerView和UITableView的联动/">ios中UIPickerView和UITableView的联动</a>
-    </h1>
+    <a href="/2017/02/01/ios不同屏幕分辨率下的设计规范/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          ios不同屏幕分辨率下的设计规范
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/01/11/LeetCode-002-Add-Two-Numbers/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">LeetCode-002-Add-Two-Numbers</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">iOS开发</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/18/OC的元类与父类以及isa指针关系图/" class="archive-article-date">
-  	<time datetime="2017-03-18T14:23:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/18/OC的元类与父类以及isa指针关系图/">OC的元类与父类以及isa指针关系图</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">iOS开发</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/02/24/ios的Frame与Bounds/" class="archive-article-date">
-  	<time datetime="2017-02-24T12:30:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/02/24/ios的Frame与Bounds/">ios的Frame与Bounds</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">iOS开发</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/02/04/iOS多线程/" class="archive-article-date">
-  	<time datetime="2017-02-04T11:45:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/02/04/iOS多线程/">iOS多线程</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">iOS开发</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/02/02/ios的UINavigationController/" class="archive-article-date">
-  	<time datetime="2017-02-02T15:13:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/02/02/ios的UINavigationController/">ios的UINavigationController</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">iOS开发</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/02/01/ios不同屏幕分辨率下的设计规范/" class="archive-article-date">
-  	<time datetime="2017-02-01T10:14:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/02/01/ios不同屏幕分辨率下的设计规范/">ios不同屏幕分辨率下的设计规范</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">iOS开发</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/01/07/iOS思维导图-0/" class="archive-article-date">
-  	<time datetime="2017-01-07T13:28:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/01/07/iOS思维导图-0/">iOS开发思维导图</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">iOS开发</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -494,9 +368,9 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: undefined,

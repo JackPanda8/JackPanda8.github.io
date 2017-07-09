@@ -6,17 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="localhost:4000">
-  <title>Tag: iOS开发 | JackPanda&#39;s Blog</title>
+  <title>iOS多线程 | JackPanda&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="May you find your inner piece.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="JackPanda&#39;s Blog">
-<meta property="og:url" content="localhost:4000/tags/iOS开发/index.html">
+  <meta name="description" content="ios多线程四种方法  Pthreads 支持多系统的通用多线程API  NSThread ios将POSIX封装好的面相对象的多线程类  GCD  Grand Central Dispatch 大法好  NSOperation &amp;amp; NSOperationQueue ios对GCD的封装 区别直接上图">
+<meta name="keywords" content="iOS开发">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS多线程">
+<meta property="og:url" content="localhost:4000/2017/02/04/iOS多线程/index.html">
 <meta property="og:site_name" content="JackPanda&#39;s Blog">
-<meta property="og:description" content="May you find your inner piece.">
+<meta property="og:description" content="ios多线程四种方法  Pthreads 支持多系统的通用多线程API  NSThread ios将POSIX封装好的面相对象的多线程类  GCD  Grand Central Dispatch 大法好  NSOperation &amp;amp; NSOperationQueue ios对GCD的封装 区别直接上图">
+<meta property="og:image" content="https://raw.githubusercontent.com/JackPanda8/ImageHosting/master/fourmethod.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/JackPanda8/ImageHosting/master/gcd.png">
+<meta property="og:updated_time" content="2017-02-16T02:52:06.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JackPanda&#39;s Blog">
-<meta name="twitter:description" content="May you find your inner piece.">
+<meta name="twitter:title" content="iOS多线程">
+<meta name="twitter:description" content="ios多线程四种方法  Pthreads 支持多系统的通用多线程API  NSThread ios将POSIX封装好的面相对象的多线程类  GCD  Grand Central Dispatch 大法好  NSOperation &amp;amp; NSOperationQueue ios对GCD的封装 区别直接上图">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/JackPanda8/ImageHosting/master/fourmethod.png">
   
     <link rel="alternative" href="/atom.xml" title="JackPanda&#39;s Blog" type="application/atom+xml">
   
@@ -152,188 +157,139 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-iOS多线程" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/23/记一次XCode项目工程文件冲突/" class="archive-article-date">
-  	<time datetime="2017-05-23T02:31:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-23</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/23/记一次XCode项目工程文件冲突/">记一次XCode项目工程文件冲突</a>
+    <h1 class="article-title" itemprop="name">
+      iOS多线程
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">iOS开发</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/22/ios中UIPickerView和UITableView的联动/" class="archive-article-date">
-  	<time datetime="2017-05-22T08:03:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/22/ios中UIPickerView和UITableView的联动/">ios中UIPickerView和UITableView的联动</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">iOS开发</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/18/OC的元类与父类以及isa指针关系图/" class="archive-article-date">
-  	<time datetime="2017-03-18T14:23:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/18/OC的元类与父类以及isa指针关系图/">OC的元类与父类以及isa指针关系图</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">iOS开发</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/02/24/ios的Frame与Bounds/" class="archive-article-date">
-  	<time datetime="2017-02-24T12:30:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/02/24/ios的Frame与Bounds/">ios的Frame与Bounds</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">iOS开发</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/02/04/iOS多线程/" class="archive-article-date">
+        
+        <a href="/2017/02/04/iOS多线程/" class="archive-article-date">
   	<time datetime="2017-02-04T11:45:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-04</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/02/04/iOS多线程/">iOS多线程</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><p>ios多线程四种方法</p>
+<ol>
+<li><p>Pthreads 支持多系统的通用多线程API</p>
+</li>
+<li><p>NSThread ios将POSIX封装好的面相对象的多线程类</p>
+</li>
+<li><p>GCD  Grand Central Dispatch 大法好</p>
+</li>
+<li><p>NSOperation &amp; NSOperationQueue ios对GCD的封装</p>
+<p>区别直接上图</p>
+</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/JackPanda8/ImageHosting/master/fourmethod.png" alt="四种多线程方法"></p>
+</li>
+</ul>
+<a id="more"></a>
+<ul>
+<li><p>GCD</p>
+<ol>
+<li>GCD简介</li>
+</ol>
+<blockquote>
+<p>GCD 全称是Grand Central Dispatch，可译为“超级厉害的中枢调度器”，GCD 是苹果公司为多核的并行运算提出的解决方案， GCD会自动利用更多的 CPU 内核（比如双核、四核）来开启线程执行任务，GCD 会自动管理线程的生命周期（创建线程、调度任务、销毁线程），不需要我们程序员手动管理内存。</p>
+<p><img src="https://raw.githubusercontent.com/JackPanda8/ImageHosting/master/gcd.png" alt=""></p>
+</blockquote>
+<ol>
+<li><p>使用</p>
+<ul>
+<li><p>获取主队列</p>
+<p>主队列是全局串行队列，用于控制UI。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">dispatch_queue_t main = dispatch_get_main_queue();</div></pre></td></tr></table></figure>
+</li>
+<li><p>获取全局并行队列</p>
+<p>系统提供的全局并发队列，一般耗时操作放在全局并行队列执行。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">dispatch_queue_t global = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);</div></pre></td></tr></table></figure>
+</li>
+<li><p>自己创建串行和并行队列</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">//串行队列</div><div class="line">dispatch_queue_t queue1 = dispatch_queue_create(&quot;JackPanda.serial&quot;, DISPATCH_QUEUE_SERIAL);</div><div class="line">//并行队列</div><div class="line">dispatch_queue_t queue2 = dispatch_queue_create(&quot;JackPanda.concurrence&quot;, DISPATCH_QUEUE_CONCURRENCE);</div></pre></td></tr></table></figure>
+</li>
+<li><p>创建同步和异步任务</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">//同步任务</div><div class="line">dispatch_sync(main, ^&#123;  </div><div class="line">	NSLog(@&quot;同步任务 在 串行队列 中执行&quot;)；</div><div class="line">&#125;);</div><div class="line">dispatch_sync(global, ^&#123;</div><div class="line">  	NSLog(@&quot;同步任务 在 并行队列 中执行&quot;)；</div><div class="line">&#125;);</div><div class="line">//异步任务</div><div class="line">dispatch_async(queue1, ^&#123;</div><div class="line">  	NSLog(@&quot;异步任务 在 串行队列 中执行&quot;)；</div><div class="line">&#125;);</div><div class="line">dispatch_async(queue2, ^&#123;</div><div class="line">  	NSLog(@&quot;异步任务 在 并行行队列 中执行&quot;)；</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>其实多线程的重点就在同步异步任务—dispatch_sync和dispatch_async，串行和并行都是FIFO取出来，也都是分配cpu时间片，只不过串行队列的任务不会出现交叉使用时间片，一定是按照先后顺序接受分配cpu。</p>
+</li>
+<li><p>从其它线程回到主线程</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">dispatch_async(dispatch_get_main_queue(), ^&#123;</div><div class="line">	//self.label.text  = xxx;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+</ul>
+</li>
+<li><p>Tips</p>
+<ul>
+<li>其实并不是绝对的同步任务就一定在当前线程，异步任务就一定会在新开的线程执行。同步(sync)任务当从其它线程向主线程派发时，就会在主线程执行，当异步(async)任务从主线程向主线程派发时，也会在主线程执行，并不会新开线程。同步和异步主要区别是：<strong>是否会阻塞当前线程。</strong></li>
+<li>无论串行还是并发队列,任务启动顺序都是按照 FIFO 的,只是并发队列允许同一时间有多个任务执行都在执行.</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<ul>
+<li><p>NSOperation &amp;NSOperationQueue</p>
+<p>NSOperation是抽象类，一般使用NSInvokeOperation和NSBlockOperation或者它们的子类创建任务，</p>
+<blockquote>
+<p>步骤简述</p>
+<ol>
+<li>先将需要执行的操作封装到一个NSOperation的子类对象中</li>
+<li>然后将NSOperation对象添加到NSOperationQueue中</li>
+<li>系统会自动将NSOperationQueue中的NSOperation取出来</li>
+<li>将取出的NSOperation封装的操作放到一条新线程中执行</li>
+</ol>
+</blockquote>
+<p>未完待续。。。</p>
+</li>
+</ul>
 
-        <div class="article-info info-on-right">
-          
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>欢迎投食🍌🍌🍌<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://raw.githubusercontent.com/JackPanda8/Mess/master/alipayQRCode.jpeg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://raw.githubusercontent.com/JackPanda8/Mess/master/wechatQRCode.JPG">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -345,133 +301,104 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http:localhost:4000/2017/02/04/iOS多线程/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/02/02/ios的UINavigationController/" class="archive-article-date">
-  	<time datetime="2017-02-02T15:13:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-02</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/02/02/ios的UINavigationController/">ios的UINavigationController</a>
-    </h1>
+    <a href="/2017/02/13/git使用-点滴记录/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          git使用--点滴记录
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/02/02/ios的UINavigationController/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ios的UINavigationController</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">iOS开发</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/02/01/ios不同屏幕分辨率下的设计规范/" class="archive-article-date">
-  	<time datetime="2017-02-01T10:14:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/02/01/ios不同屏幕分辨率下的设计规范/">ios不同屏幕分辨率下的设计规范</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">iOS开发</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/01/07/iOS思维导图-0/" class="archive-article-date">
-  	<time datetime="2017-01-07T13:28:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/01/07/iOS思维导图-0/">iOS开发思维导图</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">iOS开发</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -494,9 +421,9 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: undefined,

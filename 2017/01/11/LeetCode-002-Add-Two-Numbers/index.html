@@ -6,19 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="localhost:4000">
-  <title>test | JackPanda&#39;s Blog</title>
+  <title>LeetCode-002-Add-Two-Numbers | JackPanda&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="test">
-<meta name="keywords" content="iOS开发">
+  <meta name="description" content="LeetCode-002 Add Two Numbers 题目描述给定两个非负整数，将其按照个位-&amp;gt;十位-&amp;gt;百位..的逆序形式作为输入，要求输出两个数之和的逆序形式。例如输入为 3-&amp;gt;5-&amp;gt;7和4-&amp;gt;6-&amp;gt;5，输出为7-&amp;gt;1-&amp;gt;3-&amp;gt;1。">
+<meta name="keywords" content="LeetCode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="test">
-<meta property="og:url" content="localhost:4000/2017/07/09/test/index.html">
+<meta property="og:title" content="LeetCode-002-Add-Two-Numbers">
+<meta property="og:url" content="localhost:4000/2017/01/11/LeetCode-002-Add-Two-Numbers/index.html">
 <meta property="og:site_name" content="JackPanda&#39;s Blog">
-<meta property="og:description" content="test">
-<meta property="og:updated_time" content="2017-07-09T09:10:19.442Z">
+<meta property="og:description" content="LeetCode-002 Add Two Numbers 题目描述给定两个非负整数，将其按照个位-&amp;gt;十位-&amp;gt;百位..的逆序形式作为输入，要求输出两个数之和的逆序形式。例如输入为 3-&amp;gt;5-&amp;gt;7和4-&amp;gt;6-&amp;gt;5，输出为7-&amp;gt;1-&amp;gt;3-&amp;gt;1。">
+<meta property="og:image" content="https://raw.githubusercontent.com/JackPanda8/ImageHosting/master/LC002-AddTwoNumbers.PNG">
+<meta property="og:updated_time" content="2017-01-13T12:43:34.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="test">
-<meta name="twitter:description" content="test">
+<meta name="twitter:title" content="LeetCode-002-Add-Two-Numbers">
+<meta name="twitter:description" content="LeetCode-002 Add Two Numbers 题目描述给定两个非负整数，将其按照个位-&amp;gt;十位-&amp;gt;百位..的逆序形式作为输入，要求输出两个数之和的逆序形式。例如输入为 3-&amp;gt;5-&amp;gt;7和4-&amp;gt;6-&amp;gt;5，输出为7-&amp;gt;1-&amp;gt;3-&amp;gt;1。">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/JackPanda8/ImageHosting/master/LC002-AddTwoNumbers.PNG">
   
     <link rel="alternative" href="/atom.xml" title="JackPanda&#39;s Blog" type="application/atom+xml">
   
@@ -154,27 +156,44 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-test" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-LeetCode-002-Add-Two-Numbers" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      test
+      LeetCode-002-Add-Two-Numbers
     </h1>
   
 
         
-        <a href="/2017/07/09/test/" class="archive-article-date">
-  	<time datetime="2017-07-09T09:09:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-09</time>
+        <a href="/2017/01/11/LeetCode-002-Add-Two-Numbers/" class="archive-article-date">
+  	<time datetime="2017-01-11T14:41:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-11</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="test"><a href="#test" class="headerlink" title="test"></a>test</h2>
+        <h3 id="LeetCode-002-Add-Two-Numbers"><a href="#LeetCode-002-Add-Two-Numbers" class="headerlink" title="LeetCode-002 Add Two Numbers"></a>LeetCode-002 Add Two Numbers</h3><ol>
+<li><p>题目描述<br>给定两个非负整数，将其按照个位-&gt;十位-&gt;百位..的逆序形式作为输入，要求输出两个数之和的逆序形式。例如输入为 3-&gt;5-&gt;7和4-&gt;6-&gt;5，输出为7-&gt;1-&gt;3-&gt;1。</p>
+<p><a id="more"></a><img src="https://raw.githubusercontent.com/JackPanda8/ImageHosting/master/LC002-AddTwoNumbers.PNG" alt="LC-002"><br><a href="https://leetcode.com/problems/add-two-numbers/" target="_blank" rel="external">LC-002</a></p>
+</li>
+<li><p>题目分析</p>
+<ul>
+<li>第一反应是转成两个整数在让其相加然后再逆序转回来，但是很明显这样的时间复杂度太高。既然给出了逆序的数，可以想办法直接对其进行加法运算。加法无非就是相应位置上的数字相加然后再加上前一位传过来的进位进行加一操作。</li>
+<li>核心技巧：<strong>每一位都在重复一个操作——相同位置数字之和对10取余+前一个位置数字之和除以10的结果（0或者1）.</strong></li>
+</ul>
+</li>
+<li><p>Java源码</p>
+</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.util.*;</div><div class="line"><span class="keyword">import</span> java.lang.StringBuilder;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> ListNode <span class="title">addTwoNumbers</span><span class="params">(ListNode list1, ListNode list2)</span> </span>&#123;</div><div class="line">        ListNode result = <span class="keyword">new</span> ListNode(<span class="number">0</span>);</div><div class="line">        ListNode start = result;</div><div class="line">        <span class="keyword">int</span> sum = <span class="number">0</span>;</div><div class="line">        <span class="keyword">while</span>(list1 != <span class="keyword">null</span> || list2 != <span class="keyword">null</span>) &#123;</div><div class="line">            sum = sum/<span class="number">10</span>;<span class="comment">//精髓在这里。整数位与位之间的加法与进位：利用整数的除法，</span></div><div class="line">            <span class="comment">//不足十的数除以十得到0，下一位进位为0，多于十的数除以十也是得到下一位的进位</span></div><div class="line">            <span class="keyword">if</span>(list1 != <span class="keyword">null</span>) &#123;</div><div class="line">                sum += list1.val;</div><div class="line">                list1 = list1.next;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">if</span>(list2 != <span class="keyword">null</span>) &#123;</div><div class="line">                sum += list2.val;</div><div class="line">                list2 = list2.next;</div><div class="line">            &#125;</div><div class="line">            result.next = <span class="keyword">new</span> ListNode(sum % <span class="number">10</span>);</div><div class="line">            result = result.next;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span>(sum/<span class="number">10</span> == <span class="number">1</span>) &#123;</div><div class="line">            result.next = <span class="keyword">new</span> ListNode(<span class="number">1</span>);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> start.next;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        String input = <span class="keyword">new</span>  String(<span class="string">"(2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)"</span>);</div><div class="line">        String output = <span class="string">""</span>;</div><div class="line">        String firstList, secondList;</div><div class="line">        String[] splitResult = input.split(<span class="string">"\\+"</span>);</div><div class="line">        firstList = splitResult[<span class="number">0</span>];</div><div class="line">        secondList = splitResult[<span class="number">1</span>];</div><div class="line">        firstList = firstList.replaceAll(<span class="string">"\\(|\\)|\\-|\\&gt;| "</span>, <span class="string">""</span>);</div><div class="line">        secondList = secondList.replaceAll(<span class="string">"\\(|\\)|\\-|\\&gt;| "</span>, <span class="string">""</span>);</div><div class="line"></div><div class="line">        ListNode list1 = <span class="keyword">new</span> ListNode(<span class="number">0</span>);</div><div class="line">        ListNode list2 = <span class="keyword">new</span> ListNode(<span class="number">0</span>);</div><div class="line">        ListNode node1 = list1;</div><div class="line">        ListNode node2 = list2;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; firstList.length(); i++) &#123;</div><div class="line">            list1.val = firstList.toCharArray()[i] - <span class="string">'0'</span>;</div><div class="line">            list1.next = (i != firstList.length() - <span class="number">1</span>)? (<span class="keyword">new</span> ListNode(<span class="number">0</span>)):<span class="keyword">null</span>;</div><div class="line">            list1 = list1.next;</div><div class="line">        &#125;</div><div class="line">        list1 = node1;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; secondList.length(); i++) &#123;</div><div class="line">            list2.val = secondList.toCharArray()[i] - <span class="string">'0'</span>;</div><div class="line">            list2.next = (i != secondList.length() - <span class="number">1</span>)? (<span class="keyword">new</span> ListNode(<span class="number">0</span>)):<span class="keyword">null</span>;</div><div class="line">            list2 = list2.next;</div><div class="line">        &#125;</div><div class="line">        list2 = node2;</div><div class="line"></div><div class="line">        ListNode result = Main.addTwoNumbers(list1, list2);</div><div class="line"><span class="comment">//        System.out.println(result.val);</span></div><div class="line"></div><div class="line">        <span class="keyword">while</span>(result != <span class="keyword">null</span>) &#123;</div><div class="line">            <span class="keyword">if</span>(result.next != <span class="keyword">null</span>) &#123;</div><div class="line">                output = output + (<span class="keyword">new</span> Integer(result.val)).toString() + <span class="string">" -&gt; "</span>;</div><div class="line">            &#125; <span class="keyword">else</span> &#123;</div><div class="line">                output = output + (<span class="keyword">new</span> Integer(result.val)).toString();</div><div class="line">            &#125;</div><div class="line">            result = result.next;</div><div class="line">        &#125;</div><div class="line">        System.out.println(output);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">ListNode</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> val;</div><div class="line">    ListNode next;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">ListNode</span><span class="params">(<span class="keyword">int</span> val)</span> </span>&#123;</div><div class="line">        <span class="keyword">this</span>.val = val;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>stay hungry, stay foolish. –steve jobs.</p>
+</blockquote>
+
       
 
       
@@ -218,7 +237,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">iOS开发</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">LeetCode</a>
         		</li>
       		
 		</ul>
@@ -274,7 +293,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http:localhost:4000/2017/07/09/test/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http:localhost:4000/2017/01/11/LeetCode-002-Add-Two-Numbers/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -286,6 +305,25 @@
 </article>
 
   
+<nav id="article-nav">
+  
+    <a href="/2017/01/13/LeetCode-006-ZigZagConversion/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          LeetCode-006-ZigZagConversion
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/01/09/LeetCode-001-TwoSum/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">LeetCode-001-TwoSum</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -416,7 +454,19 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">LeetCode</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">iOS开发</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">壮士，干了这碗鸡汤</a>
               </li>
             
             <div class="clearfix"></div>
